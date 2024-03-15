@@ -82,3 +82,12 @@ footer{
     align-items: center;
 }
 
+.home p, .home h3, .home img{
+    margin: 2rem;
+}
+.home ul{
+    margin: 3rem;
+}
+.home h3{
+    text-align: center;
+}
