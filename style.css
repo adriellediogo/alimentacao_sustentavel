@@ -91,3 +91,7 @@ footer{
 .home h3{
     text-align: center;
 }
+#videos{
+    display:block;
+    text-align: center;
+}
