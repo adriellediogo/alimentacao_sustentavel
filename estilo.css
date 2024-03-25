@@ -47,52 +47,44 @@ section{
     border-radius: 24px;
     
 }
-
-div .bake, .smo{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 60px;
-    padding: 12px;
-}
-
-.bake h4, .bake ul{
-    padding-top: 20px;
-}
-
-.smo h4, .smo ul{
-    padding-top: 20px;
-}
-
-.mp{
-    padding-top: 15px;
-}
-
-.mp2{
-    padding-top: 32px;
-}
-.bake{
-    margin: 4rem;
-    padding-top: 15px;
-}
-
 footer{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-.home p, .home h3, .home img{
-    margin: 2rem;
-}
-.home ul{
+.privado h3,
+.privado p, 
+.privado img{
+    margin: 2rem;    
+} 
+.privado ul{
     margin: 3rem;
 }
-.home h3{
-    text-align: center;
+.privado h3{
+    text-align: left;
 }
-#videos{
-    display:block;
-    text-align: center;
+.privado p{
+    text-align: left;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
-
+.carousel-container{
+    overflow: hidden;
+}
+.carousel-slide{
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel-slide img{
+    width: 250px;
+    height:250px;
+    border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+    .carousel-slide {
+        flex-wrap: nowrap;
+    }
+    .carousel-slide img {
+        margin-right: 10px;
+    }
+}
