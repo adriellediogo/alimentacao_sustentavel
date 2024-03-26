@@ -1,17 +1,27 @@
-const carrouselSlide = document.querySelector('.carousel-slide');
-const images = document.querySelectorAll('.carousel-slide img');
+let position = 0;
+const slides = document.querySelectorAll('.carousel img');
+const totalSlides = slides.length;
+const slideWidth = slides[0].clientWidth;
+const container = document.querySelector('.carousel');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
 
-//Configurar o contador de imagem e largura do slide
-let counter = 1;
-const size = images[0].clientWidth;
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
 
-//Movendo automaticamente o carrossel
 function nextSlide() {
-    if (counter >= images.length - 1) return;
-    carrouselSlide.style.transition = "transform 0.5s ease-in-out";
-    counter++;
-    carrouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    position -= slideWidth;
+    if (position < -(totalSlides - 1) * slideWidth) {
+        position = 0;
     }
+    container.style.transform = `translateX(${position}px)`;
+}
 
-//Executar a função nextSlide
-setInterval(nextSlide, 3000);
+function prevSlide() {
+    position += slideWidth;
+    if (position > 0) {
+        position = -(totalSlides - 1) * slideWidth;
+    }
+    container.style.transform = `translateX(${position}px)`;
+}
+
