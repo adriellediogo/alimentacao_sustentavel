@@ -1,17 +1,11 @@
-const carrouselSlide = document.querySelector('.carousel-slide');
-const images = document.querySelectorAll('.carousel-slide img');
+$(document).ready(function(){
+  $('.carousel').slick({
+    slidesToShow: 3, // Quantidade de slides visíveis por vez
+    slidesToScroll: 1, // Quantidade de slides a serem rolados por vez
+    autoplay: true, // Autoplay do carrossel
+    autoplaySpeed: 3000, // Velocidade do autoplay em milissegundos
+    prevArrow: $('.prev'), // Botão de navegação para o slide anterior
+    nextArrow: $('.next') // Botão de navegação para o próximo slide
+  });
+});
 
-//Configurar o contador de imagem e largura do slide
-let counter = 1;
-const size = images[0].clientWidth;
-
-//Movendo automaticamente o carrossel
-function nextSlide() {
-    if (counter >= images.length - 1) return;
-    carrouselSlide.style.transition = "transform 0.5s ease-in-out";
-    counter++;
-    carrouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-    }
-
-//Executar a função nextSlide
-setInterval(nextSlide, 3000);

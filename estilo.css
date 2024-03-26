@@ -68,23 +68,16 @@ footer{
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
-.carousel-container{
-    overflow: hidden;
+.prev, .next {
+    background-color: #1be33b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
 }
-.carousel-slide{
-    display: flex;
-    transition: transform 0.5s ease;
-}
-.carousel-slide img{
-    width: 250px;
-    height:250px;
-    border-radius: 10px;
-}
-@media screen and (max-width: 768px) {
-    section{
-        margin: 24px 0.5rem;
-    }
-    .carousel-slide img {
-        margin-right: 10px;
-    }
+
+.prev:hover, .next:hover {
+    background-color: #159c29;
 }
