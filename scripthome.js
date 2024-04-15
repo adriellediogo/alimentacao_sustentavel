@@ -1,34 +1,15 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=100px, initial-scale=1.0">
-    <link rel="stylesheet" href="styleHome.css">
-    <title>Vivendo bem - Home</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <img src="img\Logo-2.png" width="100px" height="px"/>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="governamental.html">Governamental</a></li>
-                <li><a href="privado.html">Privado</a></li>
-                <li><a href="receitas.html">Receitas</a></li>
-                <li><button onclick="fazerLogout()">Logout</button></li>
-            </ul>
-        </nav>
-    </header>
-    <script src="common.js"></script>
-    <main>
-        <section class="home">
-            <div>
+// criando elemento de postagens
+let post1 = document.createElement("section")
+let post2 = document.createElement ("section")
+
+post1.innerHTML = `
+<div>
                 <h3> Alimentação e sustentabilidade: como ter uma alimentação sustentável?</h3>
                 <p>
                     A relação entre alimentação e sustentabilidade demonstra que a preocupação com os alimentos que ingerimos deve ir além de questões nutricionais e estéticas. Não que isso não seja importante, mas os impactos que a comida causa no planeta também são – e devem ser levados em conta.
-
+    
                      Há quem diga, inclusive, que para ser considerada uma alimentação saudável, ela também deve ser sustentável. Afinal, ar limpo e água potável são essenciais para a saúde e, se não escolhermos os alimentos corretamente, podemos estar contribuindo para a escassez ou até para o esgotamento desses recursos. 
-
+    
                      Existe uma conexão entre tudo no Planeta e, por isso, é necessário ficarmos atentos ao que o nosso consumo está causando ao nosso redor, optando pela realização de escolhas mais sustentáveis, incluindo a alimentação sustentável. 
                 </p>
                 <img class="img-conteudo" src="img/home1.jpg" width="250px" alt="alimentos">
@@ -51,24 +32,19 @@
                 </ul>
                 </p>
                 <img class="img-conteudo" src="img/home2.jpg" width="250px" alt="alimentos"/>   
-            </div>    
-        </section>
-        
-        <section class="home" id="videos">
-            <div>
-                <h3>Alimentação sustentável: o que é isso?</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/yWFcamYWeMs?si=ZyycZsNuNs-lmTFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    
-                <h3>Como Cultivar Sua Horta de Tempero</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/3IW8wGRO-Lo?si=36yoy7fLPCogSAVq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </section>
-        
-       
-    </main>
-    <footer>
-        <img src="img\Rodapé.jpeg" width="90px" height="30px"/>
-        <p>© 2024 - Todos os Direitos Reservados</p>
-    </footer>
-</body>
-</html>
+            </div>   
+`
+post2.innerHTML = `
+<div id="videos">
+<h3>Alimentação sustentável: o que é isso?</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yWFcamYWeMs?si=ZyycZsNuNs-lmTFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3>Como Cultivar Sua Horta de Tempero</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3IW8wGRO-Lo?si=36yoy7fLPCogSAVq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+`
+
+let main = document.querySelector("main")
+main.appendChild(post1)
+main.appendChild(post2)
+
