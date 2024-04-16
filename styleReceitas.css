@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -39,6 +40,7 @@ button{
     border-radius: 2px;
     border: none;
     padding: 5px;
+    cursor: pointer;
 }
 
 section{
@@ -54,7 +56,8 @@ section{
     align-self: flex-end;
     align-items: center;
     text-decoration: none;
-    margin:1rem;
+    margin-left: 35rem;
+    width: 95px;
 }
 .vermais{
     display: flex;
@@ -64,7 +67,7 @@ section{
     padding: 4px 18px;
     border-radius: 5px;
 }
-.bake, .smo{
+#conteudo2, #conteudo1{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -72,22 +75,22 @@ section{
     padding: 12px;
 }
 
-.bake h4, .bake ul{
+#conteudo2 h4, #conteudo1 ul{
     padding-top: 20px;
 }
 
-.smo h4, .smo ul{
+#conteudo1 h4, #conteudo2 ul{
     padding-top: 20px;
 }
 
-.mp{
+.modopreparo2{
     padding-top: 15px;
 }
 
-.mp2{
+.modopreparo{
     padding-top: 32px;
 }
-.bake{
+#conteudo2{
     margin: 4rem;
     padding-top: 15px;
 }
@@ -96,4 +99,5 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 8px;
 }
