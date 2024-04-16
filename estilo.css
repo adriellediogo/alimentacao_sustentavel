@@ -1,83 +1,148 @@
-*{
+/* Redefinição de margens e paddings padrão */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-main{
-    padding: 1.5rem;
+  }
+  
+  /* Conteúdo principal da página */
+  main {
+    padding: 2rem;
     background-color: #d1eed8;
-}
-
-nav{
+    overflow-y: auto;
+  }
+  
+  /* Barra de navegação principal */
+  nav {
     display: flex;
     background-color: #FFF9F9;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     height: 3.5rem;
-}
-
-nav ul {
+  }
+  
+  nav ul {
     display: flex;
-    
-}
-nav ul li{
+  }
+  
+  nav ul li {
     display: flex;
     justify-content: space-between;
     padding: 24px;
-}
-
-nav ul li a{
+  }
+  
+  nav ul li a {
     text-decoration: none;
     color: #1be33b;
-}
-
-button{
+  }
+  
+  /* Botões */
+  button {
     color: #1be33b;
     background-color: #d1eed8;
     border-radius: 2px;
     border: none;
     padding: 5px;
-}
-
-section{
+  }
+  
+  /* Seções de conteúdo */
+  section {
     display: flex;
     margin: 24px 64px;
     background-color: #FFF9F9;
     border-radius: 24px;
-    
-}
-footer{
+  }
+  
+  /* Rodapé */
+  footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.privado h3,
-.privado p, 
-.privado img{
-    margin: 2rem;    
-} 
-.privado ul{
-    margin: 3rem;
-}
-.privado h3{
-    text-align: left;
-}
-.privado p{
-    text-align: left;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-.prev, .next {
-    background-color: #1be33b;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-}
+  }
+  
+  /* Estilos básicos */
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1,
+  h2,
+  h3,
+  p,
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Conteúdo principal */
+  main {
+    padding: 2rem;
+  }
+  
+  /* Seção do herói */
+  .hero {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .hero img {
+    width: 50%;
+    border-radius: 24px;
+    object-fit: cover;
+  }
+  
+  .hero-text {
+    width: 50%;
+    padding: 1rem;
+  }
+  
+  .hero-text h2 {
+    margin-bottom: 1rem;
+  }
+  
+  /* Título principal da página */
+  h1 {
+    font-family: Arial, sans-serif; /* Define a família de fontes como Arial, com fallback para sans-serif */
+    font-size: 36px; /* Define o tamanho da fonte como 36 pixels */
+    color: #333; /* Define a cor do texto como preto (#333 representa cinza escuro) */
+    text-align: center; /* Centraliza o texto do título */
+    margin: 20px 0; /* Adiciona uma margem de 20 pixels acima e abaixo do título */
+  }
+  
+  .hero {
+    position: relative;
+  }
+  
+  /* Campo verde claro */
+  .campo-verde-claro {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; /* Reduz a largura para 80% para evitar conteúdo ultrapassando a tela */
+    padding: 20px;
+    color: #333;
+    max-height: 300px; /* Define a altura máxima do conteúdo */
+    display: flex; /* Ativa o flexbox */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    margin-top: 20px; /* Adiciona margem superior para separar da foto da horta */
+  }
+  
+  .campo-verde-claro h2 {
+    text-align: center; /* Centraliza o subtítulo */
+    font-size: 18px; /* Ajusta o tamanho da fonte do subtítulo */
+    margin-bottom: 1rem; /* Adiciona margem inferior ao subtítulo */
+    margin-top: 20px; /* Ajuste o valor para a altura desejada da linha de espaço */
+  }
+  
+  .campo-verde-claro h3 + p {
+    margin-top: 10px; /* Ajuste*/
+  }
+  .campo-verde-claro p + h3 {
+    margin-top: 20px;   
+  }
 
-.prev:hover, .next:hover {
-    background-color: #159c29;
-}
